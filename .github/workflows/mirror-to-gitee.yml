@@ -37,17 +37,17 @@ jobs:
         run: |
           set -euo pipefail
           REPO_API="https://gitee.com/api/v5/repos/${GITEE_USERNAME}/${REPO_NAME}"
-          STATUS=$(curl -s -o /tmp/gitee_repo.json -w "%{http_code}" -H "Authorization: token ${GITEE_TOKEN}" "${REPO_API}")
+          STATUS=$(curl -s --max-time 60 -o /tmp/gitee_repo.json -w "%{http_code}" -H "Authorization: token ${GITEE_TOKEN}" "${REPO_API}")
           echo "Checked Gitee repo status: ${STATUS}"
           if [ "$STATUS" = "404" ]; then
             echo "Gitee repo not found, creating..."
             CREATE_BODY=$(jq -n --arg name "$REPO_NAME" --arg desc "$REPO_DESC" '{name: $name, description: $desc, private: false}')
-            curl -s -X POST "https://gitee.com/api/v5/user/repos" \
+            curl -s --max-time 60 -X POST "https://gitee.com/api/v5/user/repos" \
               -H "Authorization: token ${GITEE_TOKEN}" \
               -H "Content-Type: application/json" \
               -d "$CREATE_BODY" \
               -o /tmp/gitee_create.json
-            STATUS=$(curl -s -o /tmp/gitee_repo.json -w "%{http_code}" -H "Authorization: token ${GITEE_TOKEN}" "${REPO_API}")
+            STATUS=$(curl -s --max-time 60 -o /tmp/gitee_repo.json -w "%{http_code}" -H "Authorization: token ${GITEE_TOKEN}" "${REPO_API}")
             if [ "$STATUS" != "200" ]; then
               echo "::error::Failed to create Gitee repo"
               cat /tmp/gitee_create.json
@@ -69,7 +69,25 @@ jobs:
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
           REPO_NAME: ${{ github.event.repository.name }}
         run: |
-          set -euo pipefail
-          git remote add gitee "https://${GITEE_USERNAME}:${GITEE_TOKEN}@gitee.com/${GITEE_USERNAME}/${REPO_NAME}.git" || git remote set-url gitee "https://${GITEE_USERNAME}:${GITEE_TOKEN}@gitee.com/${GITEE_USERNAME}/${REPO_NAME}.git"
-          git push --force gitee --all
-          git push --force gitee --tags
+          set -uo pipefail
+          REMOTE="https://${GITEE_USERNAME}:${GITEE_TOKEN}@gitee.com/${GITEE_USERNAME}/${REPO_NAME}.git"
+          git remote add gitee "${REMOTE}" || git remote set-url gitee "${REMOTE}"
+          # 推送到新建的空仓库需要传全量历史，Gitee 对境外连接会掐断 TLS
+          # （curl 28 / GnuTLS -110）；重试 + HTTP/1.1 + 大 postBuffer 提高首次推送成功率。
+          # 仓库已存在且为最新时无数据传输，瞬间完成（改名前的常态）。
+          OK=0
+          for i in 1 2 3 4 5; do
+            echo "=== push attempt ${i}/5 ==="
+            if git -c http.version=HTTP/1.1 -c http.postBuffer=52428800 push --force gitee --all \
+               && git -c http.version=HTTP/1.1 -c http.postBuffer=52428800 push --force gitee --tags; then
+              OK=1
+              break
+            fi
+            echo "attempt ${i} failed; sleeping 30s before retry"
+            sleep 30
+          done
+          if [ "$OK" != "1" ]; then
+            echo "::error::mirror push failed after 5 attempts"
+            exit 1
+          fi
+          echo "mirror push OK"

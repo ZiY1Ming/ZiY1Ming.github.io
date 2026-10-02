@@ -5,7 +5,7 @@ weight: 25
 description: "Kaggle 竞赛实验与研究归档：把竞赛里的数据处理、特征/建模实验与复盘沉淀成可回看、可复用的记录。"
 tech: ["Kaggle", "Python", "ML"]
 status: "研究归档 · 持续更新"
-github: "https://github.com/Zi-Yi-Ming/kaggle-archive"
+github: "https://github.com/ZiY1Ming/kaggle-archive"
 ---
 
 Kaggle 竞赛实验与研究归档：把做过的竞赛题、实验脚本和复盘按仓库沉淀下来，方便回看与复用。
@@ -22,4 +22,4 @@ Kaggle 竞赛实验与研究归档：把做过的竞赛题、实验脚本和复�
 - **Store Sales — 提交正确性**：lag/rolling 特征 +0.04 进头部区间，但两次「本地完全看不出来」的灾难分（提交 id 错位 -3.50、测试滞后特征 NaN 塌陷 -1.76）证明——提交正确性与模型质量是两件事
 - **Smartphone Addiction (S6E8) — OOF 混合**：69 万行合成表格，单模型调参到顶后，真正的收益来自 74 模型异构集成 + 拼接社区公开 OOF 库（rank 归一化解决 log-odds 量纲陷阱），公开榜 0.97033
 
-完整学习路径（Baselines → 特征工程 → 时序 → CV → NLP → 赛制博弈）与全部比赛档案见 [GitHub 仓库](https://github.com/Zi-Yi-Ming/kaggle-archive)。
+完整学习路径（Baselines → 特征工程 → 时序 → CV → NLP → 赛制博弈）与全部比赛档案见 [GitHub 仓库](https://github.com/ZiY1Ming/kaggle-archive)。

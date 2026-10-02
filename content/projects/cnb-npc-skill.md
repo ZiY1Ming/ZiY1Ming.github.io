@@ -6,7 +6,7 @@ featured: 4
 description: "零依赖 Node.js CLI：把「建仓库→推代码→@CodeBuddy→等 PR」全链路封装成一条命令，双模式——工作模式让云端 AI 写代码提 PR（实测 240 秒），只读模式做代码评审/方案分析。"
 tech: ["Node.js", "CLI", "AI Agent", "自动化", "开源"]
 status: "开源 · MIT"
-github: "https://github.com/Zi-Yi-Ming/cnb-npc-skill"
+github: "https://github.com/ZiY1Ming/cnb-npc-skill"
 ---
 
 把 CNB 平台 CodeBuddy NPC 的完整工作流（建组织仓库、推送代码、@CodeBuddy 开启工作模式、轮询 PR）封装成一条命令：

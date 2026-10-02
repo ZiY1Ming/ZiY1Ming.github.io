@@ -1,11 +1,11 @@
-# Zi-Yi-Ming · 个人作品集
+# ZiY1Ming · 个人作品集
 
 个人作品集站点，基于 **Hugo + PaperMod 主题**自定制「Night Archive 暗色档案风」设计系统，托管在 **GitHub Pages**（免费，无需自定义域名），由 GitHub Actions 自动构建部署。另镜像到 Gitee。
 
 ## 克隆与初始化
 
 ```bash
-git clone --recurse-submodules https://github.com/Zi-Yi-Ming/Zi-Yi-Ming.github.io.git
+git clone --recurse-submodules https://github.com/ZiY1Ming/ZiY1Ming.github.io.git
 ```
 
 ## 站点特性

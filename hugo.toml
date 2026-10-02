@@ -1,7 +1,7 @@
-baseURL = 'https://zi-yi-ming.github.io/'
+baseURL = 'https://ziy1ming.github.io/'
 locale = 'zh-cn'
 defaultContentLanguage = 'zh-cn'
-title = 'Zi-Yi-Ming'
+title = 'ZiY1Ming'
 theme = 'papermod'
 
 enableRobotsTXT = true
@@ -35,9 +35,9 @@ enableGitInfo = true
 
 [params]
   env = 'production'
-  title = 'Zi-Yi-Ming'
-  description = 'Zi-Yi-Ming 的个人作品集：开源工具、量化研究、云服务与机器视觉'
-  author = 'Zi-Yi-Ming'
+  title = 'ZiY1Ming'
+  description = 'ZiY1Ming 的个人作品集：开源工具、量化研究、云服务与机器视觉'
+  author = 'ZiY1Ming'
   defaultTheme = 'dark'
   # Light 模式暂缓：先隐藏主题切换（PaperMod head/footer 脚本按此开关生效）
   disableThemeToggle = true

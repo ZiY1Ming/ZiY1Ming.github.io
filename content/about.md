@@ -8,7 +8,7 @@ hideMeta: true
 showToc: false
 ---
 
-你好，我是 Zi-Yi-Ming。
+你好，我是 ZiY1Ming。
 
 一个持续做项目、研究工具、记录技术实践的开发者。软件工程背景，目前主要精力放在 AI、开发者工具与自动化这条线上。方向还在收敛——我习惯先用项目和记录把它固定下来，而不是先想好一个标签。
 
@@ -34,7 +34,7 @@ showToc: false
 
 在 [vLLM Semantic Router](https://community.vllm-sr.ai/)（5k★ 开源项目）里参与了实际开发：PR #3294 已合入上游，现在是它 Developer Experience & Ecosystem 组的成员。这不是偶尔提点代码，而是一段持续的协作。
 
-自己做的方向里，最能代表当前状态的是 [cnb-npc-skill](https://github.com/Zi-Yi-Ming/cnb-npc-skill)：一个把“一句话派发任务 → 云端 AI 在仓库里执行 → 提交 PR / 输出评审报告”压成一条命令的工具。我用它把大量重复的仓库操作交给云端的 CodeBuddy NPC，自己只做验收，实测 240 秒内就能等到 PR（2026-08 数据）。它也是我对 AI Agent、自动化与 Developer Tools 这条线的直接实践。详情在[项目页](/projects/cnb-npc-skill/)。
+自己做的方向里，最能代表当前状态的是 [cnb-npc-skill](https://github.com/ZiY1Ming/cnb-npc-skill)：一个把“一句话派发任务 → 云端 AI 在仓库里执行 → 提交 PR / 输出评审报告”压成一条命令的工具。我用它把大量重复的仓库操作交给云端的 CodeBuddy NPC，自己只做验收，实测 240 秒内就能等到 PR（2026-08 数据）。它也是我对 AI Agent、自动化与 Developer Tools 这条线的直接实践。详情在[项目页](/projects/cnb-npc-skill/)。
 
 ## 当前关注
 
@@ -46,11 +46,11 @@ showToc: false
 
 <section class="contact-index" aria-label="联系方式">
 
-<a class="contact-index__item" href="https://github.com/Zi-Yi-Ming" target="_blank" rel="noopener noreferrer">
+<a class="contact-index__item" href="https://github.com/ZiY1Ming" target="_blank" rel="noopener noreferrer">
   <span class="contact-index__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
   <span class="contact-index__body">
     <span class="contact-index__label">GitHub</span>
-    <span class="contact-index__value">Zi-Yi-Ming</span>
+    <span class="contact-index__value">ZiY1Ming</span>
   </span>
 </a>
 

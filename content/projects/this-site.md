@@ -5,7 +5,7 @@ weight: 50
 description: "这个网站本身：Hugo + PaperMod 深度定制的 Night Archive 设计——暗色档案库 + editorial 排版、紫色 accent、像素夜景背景语言，自定义 homepage 与项目/笔记档案页，GitHub Pages 自动部署。"
 tech: ["Hugo", "PaperMod", "CSS", "SVG", "GitHub Pages"]
 status: "持续迭代"
-github: "https://github.com/ZiY1Ming/ZiY1Ming.github.io"
+github: "https://github.com/Zi-Yi-Ming/Zi-Yi-Ming.github.io"
 ---
 
 本站由 Hugo 静态站点生成器构建，在 PaperMod 之上做了深度自定义，视觉方向叫「Night Archive」：

@@ -5,7 +5,7 @@
 ## 克隆与初始化
 
 ```bash
-git clone --recurse-submodules https://github.com/ZiY1Ming/ZiY1Ming.github.io.git
+git clone --recurse-submodules https://github.com/Zi-Yi-Ming/Zi-Yi-Ming.github.io.git
 ```
 
 ## 站点特性

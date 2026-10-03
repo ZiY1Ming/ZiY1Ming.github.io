@@ -68,7 +68,7 @@ Windows 文件名搜索。基本替代了资源管理器自带的搜索。
 
 让 CNB 的 CodeBuddy NPC 在云端替我干活：一句话派发任务，它在仓库里执行完、提交 PR（或只读评审出报告），我只管验收。不占主力 Agent 的上下文和模型并发，实测 240 秒内提交 PR。
 
-[cnb-npc-skill](https://github.com/ZiY1Ming/cnb-npc-skill) · [项目实践（CSDN）](https://blog.csdn.net/2402_87488142/article/details/164303415)
+[cnb-npc-skill](https://github.com/Zi-Yi-Ming/cnb-npc-skill) · [项目实践（CSDN）](https://blog.csdn.net/2402_87488142/article/details/164303415)
 
 ### DSH（DeepSeek 桌面端）
 

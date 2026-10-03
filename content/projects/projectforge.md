@@ -6,7 +6,7 @@ featured: 3
 description: "AI 驱动的工程项目教练与实现引擎：从 JD 出发做项目规划、生成任务图，再在明确约束下执行实现，并对结果做验证与再规划。"
 tech: ["AI", "工程自动化", "任务图"]
 status: "开源 · 活跃开发"
-github: "https://github.com/ZiY1Ming/ProjectForge"
+github: "https://github.com/Zi-Yi-Ming/ProjectForge"
 ---
 
 ProjectForge 是我当前的核心个人项目：一个 AI 驱动的工程项目教练与实现引擎。它把「一段 JD / 一份需求」推进成可执行、可验证的工程实现，链路大致是：

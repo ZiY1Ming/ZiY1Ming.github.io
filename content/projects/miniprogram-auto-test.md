@@ -6,7 +6,7 @@ featured: 5
 description: "微信小程序自动化测试：让 AI 读 WXML+JS 直接生成可运行的测试脚本，附已发布 npm 适配层 miniprogram-automator-next，修掉官方 SDK 在新 DevTools / Node 上的两处坑。"
 tech: ["微信小程序", "Node.js", "自动化测试", "AI Agent", "开源"]
 status: "开源 · MIT · npm 已发布"
-github: "https://github.com/ZiY1Ming/miniprogram-auto-test"
+github: "https://github.com/Zi-Yi-Ming/miniprogram-auto-test"
 ---
 
 微信小程序的自动化测试很难写：官方的 `miniprogram-automator` 是裸 SDK，每个用例都要手写「选元素、点击、断言」，而且 2023-11 之后就没再更新。这个项目做了两件事：
